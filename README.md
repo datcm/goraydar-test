@@ -5,7 +5,19 @@ I use Java as main programming language for this project.
 
 ## Crawler
 
-I prefer Nutch, it can make crawler more scalable. But for the limited time of the test I will use Crawler4j
+I prefer Nutch, it can make crawler more scalable. But for the limited time of the test I will use Crawler4j.
+
+To build crawler
+```
+cd crawler
+./build.sh
+```
+
+To run crawler
+```
+cd crawler
+./run.sh
+```
 
 ## Web application
 
