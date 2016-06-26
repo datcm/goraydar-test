@@ -7,6 +7,7 @@ import edu.uci.ics.crawler4j.fetcher.PageFetcher;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 /**
@@ -32,7 +33,7 @@ public class Main {
 
         controller.addSeed("https://tookapic.com");
 
-        final SolrClient httpSolrClient = new HttpSolrClient("http://localhost:8983/solr/images");
+        final SolrClient httpSolrClient = new CloudSolrClient("localhost:9983");
         controller.start(new CrawlController.WebCrawlerFactory<WebCrawler>() {
             public WebCrawler newInstance() throws Exception {
                 return new ImagesCrawler(new ImageIndexer(httpSolrClient));

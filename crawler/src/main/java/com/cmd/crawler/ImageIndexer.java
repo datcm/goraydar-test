@@ -20,7 +20,7 @@ public class ImageIndexer {
             inputDoc.setField("title", imageData.title);
             inputDoc.setField("description", imageData.description);
             inputDoc.addField("tags", imageData.tags);
-            solrClient.add(inputDoc);
+            solrClient.add("images", inputDoc);
         } catch (Exception e) {
             e.printStackTrace();
         }
