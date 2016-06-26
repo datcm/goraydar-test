@@ -109,4 +109,6 @@ If user ```datcm``` wanna recommendations for ```game``` query.
 - For these users e2274473 and f795b7cb is liked photos. We not take account for 94b3d8eb because it's not the match the query
 - So system will recommend e2274473 and f795b7cb ( e2274473 in first because it's liked by two users)
 
-Similar two above exam, If user ```datcm``` wanna recommendations for ```game``` query. System will recommend 94b3d8eb doc.
+Like above exam, If user ```datcm``` wanna recommendations for ```love story``` query. System will recommend 94b3d8eb doc.
+
+**Notice that all the computation is computed in parallel**
